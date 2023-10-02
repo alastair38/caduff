@@ -16,6 +16,35 @@ $social_sharing = get_field('sharing_enabled');
   
     <?php
     blockhaus_posted_by($post);
+    
+    $new_authors = get_field('select_authors');
+		
+		print_r($new_authors);
+		
+		
+		if (  isset($new_authors) && !empty($new_authors)):
+      echo '<ul aria-label="article authors" class="flex flex-wrap p-0 font-black gap-1">';
+      foreach( $new_authors as $key => $author ) {
+      $author_link = get_term_link( $author->term_id);?>
+      <li class="flex">
+				<a rel="author" class="not-italic" href="<?php echo $author_link;?>"><?php echo $author->name;?></a>
+				
+				<?php
+				if((count($new_authors) === 2) && ($key !== count($new_authors) - 1)):	
+					echo '<span class="font-normal pl-1">and</span>';
+				elseif ((count($new_authors) > 2) && ($key !== count($new_authors) - 1)  && ($key !== count($new_authors) - 2)):
+					print('<span class="font-normal">,</span>');
+					elseif ((count($new_authors) > 2) && ($key === count($new_authors) - 2)):
+					echo '<span class="font-normal pl-1">and</span>';
+				endif;?>
+				
+			</li>
+			
+      <?php // Get rid of the other data stored in the object, since it's not needed
+      unset($author); }
+      echo '</ul>';	
+    endif;
+    
     blockhaus_posted_on();
     ?>
   </div><!-- .entry-meta -->

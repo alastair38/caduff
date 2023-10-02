@@ -48,7 +48,7 @@ if ( ! function_exists( 'blockhaus_posted_by' ) ) :
 		
 		$new_authors = get_field('select_authors');
 		
-	
+		
 		
 		
 		if (  isset($new_authors) && !empty($new_authors)):
