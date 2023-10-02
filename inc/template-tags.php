@@ -44,21 +44,26 @@ if ( ! function_exists( 'blockhaus_posted_by' ) ) :
 	 */
 	function blockhaus_posted_by($post) {
 	
-		$authors = get_the_terms( $post->ID , 'contributor' );
+		//$authors = get_the_terms( $post->ID , 'contributor' );
 		
-		if (  isset($authors) && !empty($authors)):
+		$new_authors = get_field('select_authors');
+		
+	
+		
+		
+		if (  isset($new_authors) && !empty($new_authors)):
       echo '<ul aria-label="article authors" class="flex flex-wrap p-0 font-black gap-1">';
-      foreach( $authors as $key => $author ) {
-      $author_link = get_term_link( $author);?>
+      foreach( $new_authors as $key => $author ) {
+      $author_link = get_term_link( $author->term_id);?>
       <li class="flex">
 				<a rel="author" class="not-italic" href="<?php echo $author_link;?>"><?php echo $author->name;?></a>
 				
 				<?php
-				if((count($authors) === 2) && ($key !== count($authors) - 1)):	
+				if((count($new_authors) === 2) && ($key !== count($new_authors) - 1)):	
 					echo '<span class="font-normal pl-1">and</span>';
-				elseif ((count($authors) > 2) && ($key !== count($authors) - 1)  && ($key !== count($authors) - 2)):
+				elseif ((count($new_authors) > 2) && ($key !== count($new_authors) - 1)  && ($key !== count($new_authors) - 2)):
 					print('<span class="font-normal">,</span>');
-					elseif ((count($authors) > 2) && ($key === count($authors) - 2)):
+					elseif ((count($new_authors) > 2) && ($key === count($new_authors) - 2)):
 					echo '<span class="font-normal pl-1">and</span>';
 				endif;?>
 				
@@ -81,20 +86,20 @@ endif;
  * @param string $taxonomy only 'post_tag' is changed.
  * @return array of objects
  */
-function plugin_get_the_ordered_terms ( $terms, $id, $taxonomy ) {
-	if ( 'contributor' != $taxonomy ) // only ordering tags for now but could add other taxonomies here.
-			return $terms;
+// function plugin_get_the_ordered_terms ( $terms, $id, $taxonomy ) {
+// 	if ( 'contributor' != $taxonomy ) // only ordering tags for now but could add other taxonomies here.
+// 			return $terms;
 
-	$terms = wp_cache_get($id, "{$taxonomy}_relationships_sorted");
-	if ( false === $terms ) {
-			$terms = wp_get_object_terms( $id, $taxonomy, array( 'orderby' => 'term_order' ) );
-			wp_cache_add($id, $terms, $taxonomy . '_relationships_sorted');
-	}
+// 	$terms = wp_cache_get($id, "{$taxonomy}_relationships_sorted");
+// 	if ( false === $terms ) {
+// 			$terms = wp_get_object_terms( $id, $taxonomy, array( 'orderby' => 'term_order' ) );
+// 			wp_cache_add($id, $terms, $taxonomy . '_relationships_sorted');
+// 	}
 
-	return $terms;
-}
+// 	return $terms;
+// }
 
-add_filter( 'get_the_terms', 'plugin_get_the_ordered_terms' , 10, 4 );
+// add_filter( 'get_the_terms', 'plugin_get_the_ordered_terms' , 10, 4 );
 
 // hides taxonomies in Gutenberg if 'No Meta Box' is used when registering 
 

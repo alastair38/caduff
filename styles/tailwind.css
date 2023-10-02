@@ -986,3 +986,11 @@ blockquote.is-style-default p {
 .blockhaus-gradient-bg {
   background-image: var(--wp--preset--gradient--gray-to-cyan);
 }
+
+/***** Superscript styling for ENDNOTE ref footnotes *****/
+
+a[id^='_ednref'] {
+  text-decoration: none;
+  vertical-align: super;
+  font-size: smaller;
+}
