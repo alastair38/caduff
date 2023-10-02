@@ -50,7 +50,6 @@ if ( ! function_exists( 'blockhaus_posted_by' ) ) :
 		
 		
 		
-		
 		if (  isset($new_authors) && !empty($new_authors)):
       echo '<ul aria-label="article authors" class="flex flex-wrap p-0 font-black gap-1">';
       foreach( $new_authors as $key => $author ) {
