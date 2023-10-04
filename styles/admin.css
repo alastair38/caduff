@@ -23,6 +23,10 @@
   margin-inline: auto;
 }
 
+.edit-post-visual-editor__post-title-wrapper h1 {
+  line-height: 1;
+}
+
 .editor-styles-wrapper
   .edit-post-visual-editor__post-title-wrapper
   > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
