@@ -37,7 +37,7 @@
 
 			<a class="logo flex gap-2 items-center" aria-label="Home page" rel="home" href="/">
 			
-		<img class="h-8 md:h-16 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo.png" alt="Somatosphere text logo">
+		<img class="h-8 md:h-16 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/somatosphere.png" alt="Somatosphere text logo">
 				
 	
 

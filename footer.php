@@ -71,7 +71,7 @@ if( have_rows('funder', 'option') ):?>
 		</div>
 			<p class="text-center flex flex-col items-center justify-center gap-2 text-small pt-6">
             
-         <img class="h-4 md:h-8 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo.png" alt="Somatosphere text logo">
+         <img class="h-4 md:h-8 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/somatosphere.png" alt="Somatosphere text logo">
 				<span>
 					<?php
 							/* translators: 1: Theme name, 2: Theme author. */
