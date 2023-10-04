@@ -14,7 +14,7 @@ get_header();
 
 	
 
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+		<div class="grid grid-cols-1 md:grid-cols-6 2xl:grid-cols-12 gap-12">
 			
 		<?php get_template_part('components/search-header'); ?>
 			

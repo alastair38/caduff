@@ -20,7 +20,7 @@ $post_type_obj = get_post_type_object( $post_type);
 
 ?>
 
-<header class="bg-neutral-light-100 p-6 gap-6 col-span-2 2xl:col-span-3 flex flex-col items-center justify-center">
+<header class="bg-neutral-light-100 p-6 gap-6 col-span-2 2xl:col-span-3 flex flex-col items-center justify-center text-center">
 
 <h1 class="page-title text-xl md:text-huge font-black"><?php echo $header->title;?></h1>
 

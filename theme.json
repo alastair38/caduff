@@ -159,9 +159,9 @@
           "name": "Small"
         },
         {
-          "size": "0.88rem",
+          "size": "0.78rem",
           "fluid": {
-            "min": "0.88rem",
+            "min": "0.78rem",
             "max": "1.13rem"
           },
           "slug": "normal",

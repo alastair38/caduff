@@ -9,7 +9,7 @@
 
 ?>
 
-<header class="bg-neutral-light-100 p-6 gap-12 flex flex-col items-center justify-center">
+<header class="bg-neutral-light-100 p-6 gap-12 flex flex-col items-center justify-center col-span-2 2xl:col-span-3">
 	<h1 class="text-lg font-black leading-none">
 		
 	<?php _e( 'Search results for: <span class="underline decoration-primary">' . get_search_query() . '</span>', 'blockhaus' );?>

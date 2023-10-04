@@ -47,7 +47,7 @@ if( have_rows('funder', 'option') ):?>
 		?>
 	</ul>
 	
-<div class="p-2 md:p-6 bg-contrast text-base">
+<div class="p-2 bg-contrast text-base">
 	
 	<div class="place-items-center grid grid-flow-row md:grid-flow-col auto-cols-fr gap-6 py-6 bg-contrast text-base ">
 		
@@ -69,76 +69,14 @@ if( have_rows('funder', 'option') ):?>
 		?>
 
 		</div>
-			<p class="text-center flex items-center justify-center gap-2 text-small pt-6">
-				
-			<svg
-		aria-hidden="true"
-	class="h-4 w-auto"
-   width="379.41858mm"
-   height="62.751244mm"
-   viewBox="0 0 379.41858 62.751244"
-   version="1.1"
-   id="svg1"
-   sodipodi:docname="Unnamed document 1"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
-     showgrid="true">
-    <inkscape:grid
-       id="grid10"
-       units="px"
-       originx="-209.14116"
-       originy="-237.78539"
-       spacingx="0.26458333"
-       spacingy="0.26458333"
-       empcolor="#0099e5"
-       empopacity="0.30196078"
-       color="#0099e5"
-       opacity="0.14901961"
-       empspacing="5"
-       dotted="false"
-       gridanglex="30"
-       gridanglez="30"
-       visible="true" />
-  </sodipodi:namedview>
-  <defs
-     id="defs1" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-55.335267,-62.914051)">
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:64.692px;line-height:0.8;font-family:'Gill Sans MT';-inkscape-font-specification:'Gill Sans MT Bold';fill:#00cfe3;fill-opacity:1;stroke-width:0.485191;stroke-linecap:round;stroke-linejoin:bevel"
-       x="50.806824"
-       y="111.43305"
-       id="text1"
-       inkscape:export-filename="logo_somatos.svg"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'M+ 1mn';-inkscape-font-specification:'M+ 1mn';fill:#00cfe3;fill-opacity:1;stroke-width:0.485191"
-         x="50.806824"
-         y="111.43305">Somatosphere</tspan></text>
-  </g>
-</svg>
+			<p class="text-center flex flex-col items-center justify-center gap-2 text-small pt-6">
+            
+         <img class="h-4 md:h-8 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo.png" alt="Somatosphere text logo">
+				<span>
 					<?php
 							/* translators: 1: Theme name, 2: Theme author. */
 							printf( esc_html_e( ' &copy; ' . date("Y") , 'Blockhaus' ), 'Blockhaus' );
-							?>
+							?></span>
 			</p>
 		</div>
 	</footer><!-- #colophon -->
