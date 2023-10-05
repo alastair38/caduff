@@ -1336,6 +1336,10 @@ select {
   font-size: var(--wp--preset--font-size--small);
 }
 
+.text-tiny {
+  font-size: var(--wp--preset--font-size--tiny);
+}
+
 .text-xl {
   font-size: var(--wp--preset--font-size--extra-large);
 }
@@ -3040,8 +3044,20 @@ a[id^='_ednref'] {
     white-space: normal;
   }
 
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:sticky {
     position: sticky;
+  }
+
+  .md\:bottom-4 {
+    bottom: 1rem;
+  }
+
+  .md\:right-4 {
+    right: 1rem;
   }
 
   .md\:col-span-2 {
@@ -3108,12 +3124,22 @@ a[id^='_ednref'] {
     background-color: var(--wp--preset--color--neutral-light-100);
   }
 
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .md\:p-12 {
     padding: 3rem;
   }
 
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .md\:text-left {
@@ -3126,6 +3152,10 @@ a[id^='_ednref'] {
 
   .md\:text-lg {
     font-size: var(--wp--preset--font-size--large);
+  }
+
+  .md\:text-sm {
+    font-size: var(--wp--preset--font-size--small);
   }
 }
 
