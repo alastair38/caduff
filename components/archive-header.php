@@ -17,6 +17,7 @@ $image = get_field('author_image', $term);
 $contact = get_field('contact', $term);
 $post_type = get_post_type();
 $post_type_obj = get_post_type_object( $post_type);
+$description = $term->description;
 
 ?>
 
@@ -61,11 +62,15 @@ if(!empty($contact['email']) ||!empty($contact['website']) || !empty($contact['t
 
 <?php endif;?>
 
-<div class="term-meta text-sm space-y-6">
 
-<?php
-	echo term_description();
-?>
+
+<?php if($description):?>
+	
+	<div class="term-meta text-sm space-y-6">
+	
+	<?php echo $description;
+	
+	endif;?>
 
 <?php
 				if(is_post_type_archive() || is_home()):
@@ -74,13 +79,15 @@ if(!empty($contact['email']) ||!empty($contact['website']) || !empty($contact['t
 				
 				endif;?>
 				
-<p class="text-center">
+
 	
 <?php 
 
-if(is_tax('contributor')):
-
-	if($term->count === 1):
+if(is_tax('contributor')):?>
+	
+	<p class="text-center">
+		
+	<?php if($term->count === 1):
 
 		_e( $term->count . ' article contributed', 'blockhaus' );
 		
@@ -88,9 +95,16 @@ if(is_tax('contributor')):
 		
 		_e($term->count . ' articles contributed', 'blockhaus' );
 		
-	endif;
+	endif;?>
+	
+	</p>
+	
+<?php endif;?>
 
-endif;?>
-</p>
-	</div>
+<?php if($description):?>
+	
+	</div >
+	
+<?php endif;?>
+
 </header><!-- .page-header -->

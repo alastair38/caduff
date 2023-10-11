@@ -27,7 +27,7 @@ $social_sharing = get_field('sharing_enabled');
   $post_categories = wp_get_post_categories( $post->ID, array( 'fields' => 'all' ) );
 
   if( $post_categories ):?>
-  <ul aria-labelledby="categoriesList" class="flex gap-y-2 gap-x-4 items-center flex-wrap">
+  <ul aria-labelledby="categoriesList" class="flex gap-y-3 gap-x-4 items-center flex-wrap">
   <li id="categoriesList" class="w-full">Sections:</li>
     <?php	foreach($post_categories as $cat){
         
