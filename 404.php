@@ -16,6 +16,13 @@ get_header();
 			<header class="page-header">
 				<h1 class="has-gigantic-font-size font-black"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'blockhaus' ); ?></h1>
 			</header><!-- .page-header -->
+			
+			<p>
+				We have recently launched our new Somatosphere website. Old Somatosphere content can now be founded at <a href="https://somatosphere.com/">Somatosphere.com</a>. 
+			</p>
+			<p>
+				If you have an old Somatosphere.net link, the corresponding content can be found at the same link but with '.com' replacing '.net' (eg: 'http://somatosphere.net/author/jeannettepols/' becomes 'https://somatosphere.com/author/jeannettepols/'). 
+			</p>
 
 			<div class="space-y-6">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try the search?', 'blockhaus' ); ?></p>
