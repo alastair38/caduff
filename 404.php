@@ -21,17 +21,14 @@ get_header();
 				We have recently launched our new Somatosphere website. Old Somatosphere content can now be founded at <a href="https://somatosphere.com/">Somatosphere.com</a>. 
 			</p>
 			<p>
-				If you have an old Somatosphere.net link, the corresponding content can be found at the same link but with '.com' replacing '.net' (eg: 'http://somatosphere.net/author/jeannettepols/' becomes 'https://somatosphere.com/author/jeannettepols/'). 
+				If you have an old <strong>Somatosphere.net</strong> link, the corresponding content can be found at the same link but with <strong>.com</strong> replacing <strong>.net</strong> (eg: <strong>http://somatosphere.net/author/jeannettepols/</strong> becomes <strong>https://somatosphere.com/author/jeannettepols/</strong>). 
 			</p>
 
-			<div class="space-y-6">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try the search?', 'blockhaus' ); ?></p>
+	
 
-					<?php
-					get_search_form();
-					?>
-
-			</div><!-- .page-content -->
+	
+			
+			<!-- .page-content -->
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->
