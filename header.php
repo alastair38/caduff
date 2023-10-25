@@ -15,6 +15,17 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	    <!-- Google site verification tag -->
+			<?php if ( is_front_page() ) :
+      $search_id = get_field("search_id", "options");
+      if($search_id):
+      ?>
+
+    <meta name="google-site-verification" content="<?php echo $search_id;?>" />
+
+    <?php endif;
+    endif;?>
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
