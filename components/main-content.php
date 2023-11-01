@@ -15,6 +15,25 @@ $social_sharing = get_field('sharing_enabled');
 		<?php
 
 		the_content();
+		
+		if(function_exists('get_field')):
+			$external_link = get_field('url');
+			$description = get_field('description');
+		endif;	
+			
+		if($description):
+			
+			echo '<p>' . $description . '</p>';
+			
+		endif;
+		
+		if($external_link):?>
+	
+		<a aria-label="Read <?php the_title();?>" href="<?php echo esc_url( $external_link );?>" class="rounded-md text-sm inline-block w-fit bg-contrast text-white px-6 py-2 hover:ring-2 focus:ring-2 ring-offset-2 ring-transparent hover:ring-contrast focus:ring-contrast" rel="external">
+			<?php	_e( 'View ' . get_post_type(), 'blockhaus' );?>
+		</a>
+	
+	<?php endif;
 
 		wp_link_pages(
 			array(

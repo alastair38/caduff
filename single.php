@@ -51,8 +51,12 @@ get_header();
 	
 
 			<?php	endif;
+			
+			if(get_post_type() === 'post'):
 				
 			get_template_part( 'components/related-articles' );
+			
+			endif;
 			
 			the_post_navigation(
 				array(
