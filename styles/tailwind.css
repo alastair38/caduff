@@ -110,6 +110,12 @@ hr {
   padding: revert;
 }
 
+/* Prevent overflow x of long pasted links */
+
+#content a {
+  word-break: break-word;
+}
+
 /* FOOTNOTES BLOCK */
 
 #content ol.wp-block-footnotes {
