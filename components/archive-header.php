@@ -68,7 +68,7 @@ if(!empty($contact['email']) ||!empty($contact['website']) || !empty($contact['t
 	
 	<div class="term-meta text-sm space-y-6">
 	
-	<?php echo $description;
+	<?php echo '<p>' . $description . '</p>';
 	
 	endif;?>
 

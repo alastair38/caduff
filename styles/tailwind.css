@@ -994,3 +994,11 @@ a[id^='_ednref'] {
   vertical-align: super;
   font-size: smaller;
 }
+
+/***** Superscript styling for FOOTNOTE ref footnotes *****/
+
+a[id^='_ftnref'] {
+  text-decoration: none;
+  vertical-align: super;
+  font-size: smaller;
+}

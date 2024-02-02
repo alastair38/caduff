@@ -2901,6 +2901,14 @@ a[id^='_ednref'] {
   font-size: smaller;
 }
 
+/***** Superscript styling for FOOTNOTE ref footnotes *****/
+
+a[id^='_ftnref'] {
+  text-decoration: none;
+  vertical-align: super;
+  font-size: smaller;
+}
+
 .focus-within\:border-secondary:focus-within {
   border-color: var(--wp--preset--color--secondary);
 }
