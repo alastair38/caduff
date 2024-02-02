@@ -31,7 +31,7 @@ $social_sharing = get_field('sharing_enabled');
   <li id="categoriesList" class="w-full">Sections:</li>
     <?php	foreach($post_categories as $cat){
         
-        echo '<li><a class="px-3 py-1 bg-neutral-light-900 text-contrast hover:ring-2 ring-offset-2 hover:ring-primary focus:ring-2 focus:ring-primary rounded-full" href="' . esc_attr( get_category_link( $cat->term_id ) ) . '">' . $cat->name . '</a></li>'; 
+        echo '<li><a class="px-3 py-1 bg-neutral-light-900 text-contrast hover:ring-2 ring-offset-2 hover:ring-primary focus:ring-2 focus:ring-primary rounded-full flex" href="' . esc_attr( get_category_link( $cat->term_id ) ) . '">' . $cat->name . '</a></li>'; 
       } ;?>
   </ul>
   <?php endif;
@@ -42,7 +42,7 @@ $social_sharing = get_field('sharing_enabled');
   <ul aria-labelledby="tagsList" class="flex gap-y-2 gap-x-4 items-center flex-wrap">
     <li id="tagsList" class="w-full">Tags:</li>
     <?php foreach( $post_tags as $tag ) {
-        echo '<li><a class="px-3 py-1 bg-neutral-light-900 text-contrast hover:ring-2 ring-offset-2 hover:ring-primary focus:ring-2 focus:ring-primary rounded-full" href="' . esc_attr( get_tag_link( $tag->term_id ) ) . '">' . $tag->name . '</a></li>'; 
+        echo '<li><a class="px-3 py-1 bg-neutral-light-900 text-contrast hover:ring-2 ring-offset-2 hover:ring-primary focus:ring-2 focus:ring-primary rounded-full flex" href="' . esc_attr( get_tag_link( $tag->term_id ) ) . '">' . $tag->name . '</a></li>'; 
       } ;?>
   </ul>
   <?php endif;
