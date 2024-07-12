@@ -21,10 +21,12 @@
 .editor-styles-wrapper {
   width: 90%;
   margin-inline: auto;
+  padding-inline: 1rem;
 }
 
 .edit-post-visual-editor__post-title-wrapper h1 {
   line-height: 1;
+  margin-bottom: 1.5rem;
 }
 
 .editor-styles-wrapper

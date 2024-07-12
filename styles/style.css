@@ -1915,6 +1915,12 @@ iframe {
   background-color: transparent;
 }
 
+/* INTERVIEW BLOCK PATTERN STYLES */
+
+.wp-block-group.blockhaus-interview-block p:nth-child(2) {
+  margin-top: 0;
+}
+
 /* POST NAVIGATION STYLES */
 
 .post-navigation .nav-links,
