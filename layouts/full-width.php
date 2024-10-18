@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="w-full space-y-6">
+<article id="post-<?php the_ID(); ?>" class="w-full space-y-6 mb-12">
 
 	<?php get_template_part('components/full-width-header'); ?>
 	

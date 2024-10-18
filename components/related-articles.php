@@ -9,21 +9,39 @@
  */
 
 $post_categories = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+$terms = get_the_terms($post->ID, 'series');
+$related_articles = [];
 
 
+if(!empty($terms)):
+foreach( $terms as $term ) {
+
+	$tax_query[] = array(
+			'taxonomy' => 'series',
+			'field' => 'slug',
+			'terms' => $term->slug,
+	);
+
+}
+
+endif;
+
+if(!empty($tax_query)):
 $args = array(
-  'category'   => $post_categories,
 	'post__not_in'   => array($post->ID),
 	'numberposts' => 3,
+	'tax_query' => $tax_query
 );
 
 $related_articles = get_posts($args);
+
+endif;
 
 if($related_articles):
 ?>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-12">
-	<h2 class="col-span-full text-contrast md:text-lg font-black"><?php _e( 'Related articles', 'blockhaus' );?></h2>
+	<h2 class="col-span-full text-contrast md:text-lg font-black"><?php _e( 'Also from this Series', 'blockhaus' );?></h2>
 <?php foreach($related_articles as $article) {?>
 <article class="bg-neutral-light-100 flex flex-col justify-between">
 	<div class="p-6 space-y-6">

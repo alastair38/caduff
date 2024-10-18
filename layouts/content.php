@@ -13,6 +13,9 @@
 	$type = strtolower($terms[0]->name) . ' ';
  endif;
  
+ $post_series = get_the_terms($post->ID, 'series');
+  
+ 
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="<?php if(isset($type)): echo $type; endif;?>flex flex-col space-y-6 break-words relative col-span-2 2xl:col-span-3">
@@ -63,8 +66,17 @@
 
 				endif;
 				?>
-				
-			</div><!-- .entry-meta -->
+				</div><!-- .entry-meta -->
+				<?php  if( $post_series ):?>
+				<ul aria-labelledby="seriesName" class="flex gap-y-3 mt-3 text-sm gap-x-4 items-center flex-wrap">
+					<li id="seriesName" class="w-full sr-only">Series:</li>
+						<?php	foreach($post_series as $series){
+								
+								echo '<li><a class="px-3 py-1 bg-secondary text-contrast hover:ring-2 ring-offset-2 hover:ring-secondary focus:ring-2 focus:ring-secondary rounded-full flex" href="' . esc_attr( get_term_link( $series->term_id ) ) . '">' . $series->name . '</a></li>'; 
+								unset($series);
+							} ;?>
+				</ul>
+				<?php endif;?>	
 		
 		</header><!-- .entry-header -->
 		

@@ -24,6 +24,18 @@ $social_sharing = get_field('sharing_enabled');
 <hr class="border-neutral-light-900 hidden md:block">
   <?php
   
+  $post_series = get_the_terms($post->ID, 'series');
+  
+  if( $post_series ):?>
+    <ul aria-labelledby="seriesName" class="flex gap-y-3 gap-x-4 items-center flex-wrap">
+    <li id="seriesName" class="w-full">Series:</li>
+      <?php	foreach($post_series as $series){
+          
+          echo '<li><a class="px-3 py-1 bg-secondary text-contrast hover:ring-2 ring-offset-2 hover:ring-secondary focus:ring-2 focus:ring-secondary rounded-full flex" href="' . esc_attr( get_term_link( $series->term_id ) ) . '">' . $series->name . '</a></li>'; 
+        } ;?>
+    </ul>
+    <?php endif;
+  
   $post_categories = wp_get_post_categories( $post->ID, array( 'fields' => 'all' ) );
 
   if( $post_categories ):?>
