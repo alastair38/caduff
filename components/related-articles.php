@@ -51,10 +51,7 @@ if($related_articles):
       <a aria-label="<?php echo get_the_title($article->ID);?>" class="rounded-md text-sm inline-block w-fit bg-contrast text-white px-6 py-2 ring-2 ring-offset-2 ring-transparent hover:ring-contrast focus:ring-contrast" href="<?php echo esc_url(get_the_permalink($article->ID));?>"><?php _e( 'View article', 'blockhaus' );?></a>
        
       </div>
-			<?php if(has_post_thumbnail($article->ID)):
-				$img = get_the_post_thumbnail( $article->ID, 'landscape', ['class' => 'w-full mt-auto object-cover'] );
-				echo $img;
- 			endif;?>
+		
 	</article>
 <?php }?>
 </div>
