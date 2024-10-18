@@ -298,6 +298,11 @@ iframe {
   @apply ml-auto;
 }
 
+.nav-next,
+.nav-previous {
+  max-width: 40%;
+}
+
 .nav-previous a,
 .nav-next a {
   @apply flex items-center rounded-full bg-primary py-1 text-sm text-neutral-dark-900 ring-2 ring-transparent ring-offset-2 transition-all duration-150 hover:ring-primary focus:ring-primary;

@@ -1947,6 +1947,11 @@ iframe {
   margin-left: auto;
 }
 
+.nav-next,
+.nav-previous {
+  max-width: 40%;
+}
+
 .nav-previous a,
 .nav-next a {
   display: flex;

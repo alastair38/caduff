@@ -29,7 +29,7 @@ endif;
 if(!empty($tax_query)):
 $args = array(
 	'post__not_in'   => array($post->ID),
-	'numberposts' => 3,
+	'numberposts' => 10,
 	'tax_query' => $tax_query
 );
 
