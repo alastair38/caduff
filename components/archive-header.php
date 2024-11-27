@@ -73,11 +73,21 @@ if(!empty($contact['email']) ||!empty($contact['website']) || !empty($contact['t
 	endif;?>
 
 <?php
-				if(is_post_type_archive() || is_home()):
-					
-				echo blockhaus_custom_form($post_type_obj->labels->name, $post_type); 
+
+	if(is_post_type_archive() || is_home()):
+		
+	echo blockhaus_custom_form($post_type_obj->labels->name, $post_type); 
+	
+	endif;
+	
+	// show excerpt for the our-series page
+	if(is_page('our-series')):
+		
+	echo get_the_excerpt( );
+		
+	endif;
 				
-				endif;?>
+?>
 				
 
 	
