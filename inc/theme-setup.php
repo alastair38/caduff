@@ -256,10 +256,15 @@ function blockhaus_submit_ajax_comment(){
 // order resources archive and resource-type archives alphabetically
 
 add_action( 'pre_get_posts', function ( $query ) {
-	if (( $query->is_post_type_archive('resource') && $query->is_main_query()) || is_tax('resource-type') ) { 
+	if (( $query->is_post_type_archive('resource') && ! is_admin() && $query->is_main_query()) || is_tax('resource-type') ) { 
     
 		$query->set( 'order', 'ASC' );
 		$query->set( 'orderby', 'title' );
+	  
+	};
+  if ( $query->is_tax('series') && ! is_admin())   { 
+    
+		$query->set( 'order', 'ASC' );
 	  
 	};
 } );
