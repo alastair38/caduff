@@ -265,6 +265,7 @@ add_action( 'pre_get_posts', function ( $query ) {
   if ( $query->is_tax('series') && ! is_admin())   { 
     
 		$query->set( 'order', 'ASC' );
+    $query->set( 'posts_per_page', 20 );
 	  
 	};
 } );
