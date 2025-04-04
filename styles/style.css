@@ -965,8 +965,8 @@ select {
   height: max-content;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-1\/2 {
@@ -1153,6 +1153,10 @@ select {
   overflow: hidden;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
@@ -1321,6 +1325,10 @@ select {
   padding-bottom: 1.5rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1343,6 +1351,10 @@ select {
 
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .pt-6 {
@@ -3282,6 +3294,11 @@ a[id^='_ftnref'] {
     height: auto;
   }
 
+  .lg\:min-h-fit {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
   .lg\:w-3\/4 {
     width: 75%;
   }
@@ -3344,8 +3361,16 @@ a[id^='_ftnref'] {
     padding-bottom: 0.75rem;
   }
 
+  .lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .lg\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:pt-8 {
