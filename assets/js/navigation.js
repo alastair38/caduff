@@ -14,6 +14,28 @@
     return;
   }
 
+  if (!primaryMenu) {
+    return;
+  }
+
+  const dropdownBtns = primaryMenu.querySelectorAll('li > button');
+  const allSubMenus = primaryMenu.querySelectorAll('ul.sub-menu');
+
+  for (const subMenu of allSubMenus) {
+    const controlBtn = subMenu.previousElementSibling.previousElementSibling;
+    const controlsId = controlBtn.getAttribute('aria-controls');
+    subMenu.setAttribute('id', controlsId);
+  }
+
+  for (const btn of dropdownBtns) {
+    btn.addEventListener('click', function (e) {
+      const activeSubMenu = e.target.nextElementSibling.nextElementSibling;
+      const isExpanded = JSON.parse(btn.getAttribute('aria-expanded'));
+      btn.setAttribute('aria-expanded', !isExpanded);
+      activeSubMenu.classList.toggle('hidden');
+    });
+  }
+
   const button = siteNavigation.getElementsByTagName('button')[0];
 
   // Return early if the button doesn't exist.

@@ -95,3 +95,39 @@ add_filter( 'get_the_archive_title', function ($title) {
 	
 	return $title;
  });
+ 
+ class Blockhaus_Menu_Walker extends Walker_Nav_Menu {
+	
+	function start_lvl(&$output, $depth = 1, $args = array()) {
+		
+		
+		
+		if ($args->walker->has_children) {
+			$output .= '<ul class="sub-menu grid grid-cols-1 gap-x-6 gap-y-3 shadow-lg border absolute top-full mt-1 rounded-md p-3 bg-white w-max right-0 hidden">';
+		}
+}
+
+	function start_el(&$output, $item, $depth=0, $args=[], $id=0) {
+		$output .= "<li class='flex relative items-center" .  implode(" ", $item->classes) . "'>";
+ 
+		if ($item->url && $item->url != '#') {
+			$output .= '<a href="' . $item->url . '">';
+		} else {
+			$output .= '<button aria-controls="' . $item->classes[0] . '" class="text-sm hover:text-neutral-dark-100 focus-visible:text-neutral-dark-100" aria-expanded="false">';
+		}
+ 
+		$output .= $item->title;
+ 
+		if ($item->url && $item->url != '#') {
+			$output .= '</a>';
+		} else {
+			$output .= '</button>';
+		}
+		
+		if ($args->walker->has_children) {
+			$output .= '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10 16l4-4l-4-4" />
+</svg>';
+		}			
+	}	
+}

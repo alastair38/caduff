@@ -333,6 +333,12 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
   transition: 250ms;
 }
 
+/* Dropdown */
+.menu-item-has-children > button[aria-expanded='true'] + svg {
+  transform: rotate(90deg);
+  transition: 250ms;
+}
+
 /* STICKY HEADER */
 
 header.logo-scale .logo img {

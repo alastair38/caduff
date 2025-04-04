@@ -60,7 +60,7 @@
 			
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation flex gap-0 lg:gap-6 selfend items-center py-2 h-10 lg:px-6 overflow-hidden">
+		<nav id="site-navigation" class="main-navigation flex gap-0 lg:gap-6 selfend items-center py-2 h-10 lg:px-6">
 		
 			<button class="menu-toggle text-sm flex items-center gap-1 font-sans lg:hidden font-bold uppercase aspect-square rounded-full px-2" aria-controls="primary-menu" aria-expanded="false">
 				<span id="mobile-menu-text" class="sr-only"><?php esc_html_e( 'Menu', 'blockhaus' ); ?></span>
@@ -73,7 +73,8 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-					'menu_class'		 => 'flex flex-col lg:leading-none text-2xl lg:text-contrast lg:flex-row absolute lg:relative left-0 right-0 top-0 -z-10 lg:z-0 bg-gray-100 -translate-y-full lg:translate-y-0 invisible lg:visible lg:bg-transparent gap-4 lg:gap-6 h-screen lg:h-auto justify-center items-center ml-auto ease-in-out duration-200'
+					'menu_class'		 => 'flex flex-col lg:leading-none text-2xl lg:text-contrast lg:flex-row absolute lg:relative left-0 right-0 top-0 -z-10 lg:z-0 bg-gray-100 -translate-y-full lg:translate-y-0 invisible lg:visible lg:bg-transparent gap-4 lg:gap-6 h-screen lg:h-auto justify-center items-center ml-auto ease-in-out duration-200',
+					'walker' => new Blockhaus_Menu_Walker()
 				)
 			);
 			?>
