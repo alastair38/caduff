@@ -327,6 +327,9 @@ iframe {
 
 /* MOBILE NAVIGATION */
 
+button.menu-toggle[aria-expanded='true'] + div > ul#primary-menu {
+  @apply h-screen;
+}
 nav.toggled > .menu-primary-menu-container > ul#primary-menu {
   transform: translateY(0%);
   transition: 250ms;
@@ -341,6 +344,16 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
 .menu-item-has-children > button[aria-expanded='true'] > svg {
   transform: rotate(90deg);
   transition: 250ms;
+}
+
+@media (min-width: 1024px) {
+  ul#primary-menu:has([aria-expanded='true']) {
+    min-height: 100vh;
+  }
+
+  ul#primary-menu:has([aria-expanded='false']) {
+    min-height: auto;
+  }
 }
 
 /* STICKY HEADER */

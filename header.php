@@ -70,7 +70,7 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-					'menu_class'		 => 'flex flex-col lg:leading-none text-2xl lg:text-contrast lg:flex-row absolute lg:relative left-0 right-0 top-0 -z-10 lg:z-0 bg-gray-100 -translate-y-full lg:translate-y-0 invisible lg:visible lg:bg-transparent bottom-0 min-h-screen lg:min-h-fit pt-32 pb-10 lg:pt-0 lg:pb-0 overflow-y-auto lg:h-auto justify-center items-center ml-auto ease-in-out duration-200',
+					'menu_class'		 => 'flex flex-col lg:leading-none text-2xl lg:text-contrast lg:flex-row absolute lg:relative left-0 right-0 top-0 -z-10 lg:z-0 bg-gray-100 -translate-y-full lg:translate-y-0 invisible lg:visible lg:flex lg:bg-transparent bottom-0 pt-32 pb-10 lg:pt-0 lg:pb-0 overflow-y-auto justify-center items-center ml-auto ease-in-out duration-200',
 					'walker' => new Blockhaus_Menu_Walker()
 				)
 			);
