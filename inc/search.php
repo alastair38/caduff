@@ -9,10 +9,10 @@
 /* Custom Form allows more control over output that using search block */
 
 function blockhaus_custom_form($placeholder = null, $post_type = null) {
-	$form = '<form role="search" method="get" class="search-form w-full text-sm leading-6 flex py-1 px-2 bg-base rounded-full border border-neutral-light-100 focus-within:border-secondary gap-2" action="' . home_url( '/' ) . '">
+	$form = '<form role="search" method="get" class="search-form w-auto text-sm leading-6 flex py-1 px-2 bg-base rounded-full border border-neutral-light-100 focus-within:border-secondary gap-2" action="' . home_url( '/' ) . '">
 	<label class="w-full">
 	<span class="screen-reader-text">Search for:</span>
-	<input type="search" class="search-field w-full border-none ring-transparent focus:ring-transparent focus:shadow-none focus:border-none py-0 px-2 text-sm focus-visible:outline-none" placeholder="Search ' . $placeholder . ' … " value="' . get_search_query() . '" name="s">
+	<input type="search" class="search-field w-28 border-none ring-transparent focus:ring-transparent focus:shadow-none focus:border-none py-0 px-2 text-sm focus-visible:outline-none" placeholder="Search ' . $placeholder . ' … " value="' . get_search_query() . '" name="s">
 	</label>
 
 	<input type="hidden" name="post_type" value="' . $post_type . '">

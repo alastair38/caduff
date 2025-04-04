@@ -22,14 +22,14 @@
   const allSubMenus = primaryMenu.querySelectorAll('ul.sub-menu');
 
   for (const subMenu of allSubMenus) {
-    const controlBtn = subMenu.previousElementSibling.previousElementSibling;
+    const controlBtn = subMenu.previousElementSibling;
     const controlsId = controlBtn.getAttribute('aria-controls');
     subMenu.setAttribute('id', controlsId);
   }
 
   for (const btn of dropdownBtns) {
     btn.addEventListener('click', function (e) {
-      const activeSubMenu = e.target.nextElementSibling.nextElementSibling;
+      const activeSubMenu = e.target.nextElementSibling;
       const isExpanded = JSON.parse(btn.getAttribute('aria-expanded'));
       btn.setAttribute('aria-expanded', !isExpanded);
       activeSubMenu.classList.toggle('hidden');

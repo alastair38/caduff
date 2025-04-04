@@ -103,17 +103,17 @@ add_filter( 'get_the_archive_title', function ($title) {
 		
 		
 		if ($args->walker->has_children) {
-			$output .= '<ul class="sub-menu grid grid-cols-1 gap-x-6 gap-y-3 shadow-lg border absolute top-full mt-1 rounded-md p-3 bg-white w-max right-0 hidden">';
+			$output .= '<ul class="sub-menu grid grid-cols-1 lg:gap-x-6 lg:gap-y-3 lg:shadow-lg border lg:absolute lg:top-full mt-1 rounded-md py-1 px-2 lg:px-3 lg:py-3 lg:bg-white w-max right-0 hidden">';
 		}
 }
 
 	function start_el(&$output, $item, $depth=0, $args=[], $id=0) {
-		$output .= "<li class='flex relative items-center" .  implode(" ", $item->classes) . "'>";
+		$output .= "<li class='flex flex-col lg:flex-row relative items-center" .  implode(" ", $item->classes) . "'>";
  
 		if ($item->url && $item->url != '#') {
 			$output .= '<a href="' . $item->url . '">';
 		} else {
-			$output .= '<button aria-controls="' . $item->classes[0] . '" class="text-sm hover:text-neutral-dark-100 focus-visible:text-neutral-dark-100" aria-expanded="false">';
+			$output .= '<button aria-controls="' . $item->classes[0] . '" class="text-sm flex items-center hover:text-neutral-dark-100 focus-visible:text-neutral-dark-100" aria-expanded="false">';
 		}
  
 		$output .= $item->title;
@@ -121,13 +121,14 @@ add_filter( 'get_the_archive_title', function ($title) {
 		if ($item->url && $item->url != '#') {
 			$output .= '</a>';
 		} else {
-			$output .= '</button>';
+			$output .= '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10 16l4-4l-4-4" /></button>';
 		}
 		
-		if ($args->walker->has_children) {
-			$output .= '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10 16l4-4l-4-4" />
-</svg>';
-		}			
+// 		if ($args->walker->has_children) {
+// 			$output .= '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+// 	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10 16l4-4l-4-4" />
+// </svg>';
+// 		}			
 	}	
 }

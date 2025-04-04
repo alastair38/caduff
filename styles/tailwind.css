@@ -73,7 +73,11 @@ details svg {
 /* Navigation fix for Safari */
 
 #primary-menu li {
-  @apply py-4 lg:px-4 lg:py-0;
+  @apply py-4 last-of-type:pr-0 lg:py-0 lg:pl-4 lg:pr-4;
+}
+
+#primary-menu li > .sub-menu li {
+  @apply py-2;
 }
 
 #primary-menu li a {
@@ -334,7 +338,7 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
 }
 
 /* Dropdown */
-.menu-item-has-children > button[aria-expanded='true'] + svg {
+.menu-item-has-children > button[aria-expanded='true'] > svg {
   transform: rotate(90deg);
   transition: 250ms;
 }

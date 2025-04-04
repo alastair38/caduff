@@ -814,10 +814,6 @@ select {
   top: 6rem;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .-z-10 {
   z-index: -10;
 }
@@ -983,6 +979,10 @@ select {
 
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-5 {
@@ -1272,10 +1272,6 @@ select {
   padding: 0.5rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .p-6 {
   padding: 1.5rem;
 }
@@ -1464,12 +1460,6 @@ select {
   text-decoration-thickness: 4px;
 }
 
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .ring-2 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1618,13 +1608,22 @@ details svg {
   padding-bottom: 1rem;
 }
 
+#primary-menu li:last-of-type {
+  padding-right: 0px;
+}
+
 @media (min-width: 1024px) {
   #primary-menu li {
-    padding-left: 1rem;
-    padding-right: 1rem;
     padding-top: 0px;
     padding-bottom: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+}
+
+#primary-menu li > .sub-menu li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #primary-menu li a {
@@ -2035,7 +2034,7 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
 
 /* Dropdown */
 
-.menu-item-has-children > button[aria-expanded='true'] + svg {
+.menu-item-has-children > button[aria-expanded='true'] > svg {
   transform: rotate(90deg);
   transition: 250ms;
 }
@@ -3167,8 +3166,8 @@ a[id^='_ftnref'] {
     display: inline-block;
   }
 
-  .md\:h-16 {
-    height: 4rem;
+  .md\:h-14 {
+    height: 3.5rem;
   }
 
   .md\:h-8 {
@@ -3255,8 +3254,16 @@ a[id^='_ftnref'] {
     visibility: visible;
   }
 
+  .lg\:absolute {
+    position: absolute;
+  }
+
   .lg\:relative {
     position: relative;
+  }
+
+  .lg\:top-full {
+    top: 100%;
   }
 
   .lg\:z-0 {
@@ -3300,12 +3307,31 @@ a[id^='_ftnref'] {
     gap: 3rem;
   }
 
-  .lg\:gap-6 {
-    gap: 1.5rem;
+  .lg\:gap-3 {
+    gap: 0.75rem;
+  }
+
+  .lg\:gap-x-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+
+  .lg\:gap-y-3 {
+    row-gap: 0.75rem;
   }
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:px-4 {
@@ -3313,9 +3339,9 @@ a[id^='_ftnref'] {
     padding-right: 1rem;
   }
 
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .lg\:pb-20 {
@@ -3336,6 +3362,12 @@ a[id^='_ftnref'] {
 
   .lg\:text-contrast {
     color: var(--wp--preset--color--contrast);
+  }
+
+  .lg\:shadow-lg {
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
