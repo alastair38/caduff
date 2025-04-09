@@ -346,6 +346,10 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
   transition: 250ms;
 }
 
+.menu-item-has-children > button > svg {
+  pointer-events: none;
+}
+
 @media (min-width: 1024px) {
   ul#primary-menu:has([aria-expanded='true']) {
     min-height: 100vh;
