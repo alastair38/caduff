@@ -108,7 +108,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 }
 
 	function start_el(&$output, $item, $depth=0, $args=[], $id=0) {
-		$output .= "<li class='flex flex-col lg:flex-row relative items-center" .  implode(" ", $item->classes) . "'>";
+		$output .= "<li class='flex py-2 flex-col lg:flex-row relative items-center" .  implode(" ", $item->classes) . "'>";
  
 		if ($item->url && $item->url != '#') {
 			$output .= '<a href="' . $item->url . '">';

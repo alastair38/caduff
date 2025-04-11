@@ -73,7 +73,7 @@ details svg {
 /* Navigation fix for Safari */
 
 #primary-menu li {
-  @apply py-4 last-of-type:pr-0 lg:py-0 lg:pl-4 lg:pr-4;
+  @apply py-2 last-of-type:pr-0 lg:py-0 lg:pl-4 lg:pr-4;
 }
 
 #primary-menu li > .sub-menu li {
@@ -351,13 +351,13 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
 }
 
 @media (min-width: 1024px) {
-  ul#primary-menu:has([aria-expanded='true']) {
+  /* ul#primary-menu:has([aria-expanded='true']) {
     min-height: 100vh;
   }
 
   ul#primary-menu:has([aria-expanded='false']) {
     min-height: auto;
-  }
+  } */
 }
 
 /* STICKY HEADER */

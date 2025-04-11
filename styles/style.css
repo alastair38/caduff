@@ -1149,10 +1149,6 @@ select {
   overflow: hidden;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .break-words {
   overflow-wrap: break-word;
 }
@@ -1321,10 +1317,6 @@ select {
   padding-bottom: 1.5rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1347,10 +1339,6 @@ select {
 
 .pr-3 {
   padding-right: 0.75rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .pt-6 {
@@ -1612,8 +1600,8 @@ details svg {
 /* Navigation fix for Safari */
 
 #primary-menu li {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #primary-menu li:last-of-type {
@@ -2056,13 +2044,13 @@ nav.toggled > .menu-primary-menu-container > ul#primary-menu {
 }
 
 @media (min-width: 1024px) {
-  ul#primary-menu:has([aria-expanded='true']) {
+  /* ul#primary-menu:has([aria-expanded='true']) {
     min-height: 100vh;
   }
 
   ul#primary-menu:has([aria-expanded='false']) {
     min-height: auto;
-  }
+  } */
 }
 
 /* STICKY HEADER */
@@ -3296,10 +3284,6 @@ a[id^='_ftnref'] {
     margin-left: auto;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:hidden {
     display: none;
   }
@@ -3370,16 +3354,8 @@ a[id^='_ftnref'] {
     padding-bottom: 0.75rem;
   }
 
-  .lg\:pb-0 {
-    padding-bottom: 0px;
-  }
-
   .lg\:pb-20 {
     padding-bottom: 5rem;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
   }
 
   .lg\:pt-8 {
