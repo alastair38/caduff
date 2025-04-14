@@ -367,3 +367,62 @@ function blockhaus_header_layout() {
 
 	return $header;
 }
+
+
+if ( ! function_exists( 'blockhaus_categories_grid' ) ) :
+	
+	function blockhaus_categories_grid($terms, $link_text) {
+		
+		foreach($terms as $term) {?>
+			
+			<article class="flex flex-col space-y-6 break-words relative col-span-2 2xl:col-span-3">
+
+	<?php 
+	
+	$image = $image = get_field('image', $term);
+	
+	if($image):
+	echo '<img class="w-full object-cover" src="' . $image['sizes']['blog'] . '" alt="' . $image['alt'] . '" width="' . $image['sizes']['blog-width'] . '" height="' . $image['sizes']['blog-height'] . '"/>';
+	endif;
+	?>
+
+	<div class="space-y-6">
+		
+		<header class="entry-header">
+			
+			<h2 class="text-lg font-bold leading-tight pb-3"><?php echo $term->name;?></h2>
+			
+		
+		</header><!-- .entry-header -->
+		
+		<hr>
+		
+		<div class="entry-content">
+			
+			<?php
+			
+			echo $term->description;
+
+			?>
+			
+		</div><!-- .entry-content -->
+
+		<footer class="entry-footer mt-auto">
+			
+		<a aria-label="Read <?php echo $term->name;?>" class="rounded-md text-sm inline-block w-fit bg-contrast text-white px-6 py-2 hover:ring-2 focus:ring-2 ring-offset-2 ring-transparent hover:ring-contrast focus:ring-contrast" href="<?php echo get_term_link( $term->term_id, 'series' ); ?>">
+			<?php esc_html_e( $link_text, 'blockhaus' );?>
+		</a>
+
+			
+				
+		</footer><!-- .entry-footer -->
+	
+	</div>
+	
+</article><!-- #post-<?php the_ID(); ?> -->
+			
+	<?php	}
+    
+	 }
+
+endif;
